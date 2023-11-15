@@ -1,0 +1,11 @@
+<!-- Le form change le texte et l'action du bouton d'envoie en fonction de l'existence
+ou non de l'instance @task. Si existe -> update ; sinon -> create  -->
+<%= form_with model: @task do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <%= f.label :details %>
+  <%= f.text_field :details %>
+  <%= f.label :completed %>
+  <%= f.check_box :completed %>
+  <%= f.submit %>
+<% end %>
